@@ -2,7 +2,7 @@
 
 FFmpeg command builder for VideoToolbox (Apple Silicon hardware)
 
-![example screenshot](screenshot.png)
+![example screenshot](screenshot2.png)
 
 Syntax:
 `ffmpeg
