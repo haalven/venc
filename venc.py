@@ -169,22 +169,7 @@ class MainWindow(QWidget):
 
         outp = self.build_output_path(inp)
 
-        cmd = [
-            'ffmpeg',
-            '-hwaccel', 'videotoolbox',
-            '-hwaccel_output_format', 'videotoolbox_vld',
-            '-i', inp,
-        ]
-        if resize_enabled:
-            cmd.extend(['-vf', scale_filter])
-
-        cmd.extend([
-            *v_opts,
-            '-q:v', str(qv),
-            *a_opts,
-            outp,
-        ])
-
+        # construct ffmpeg command
         cmd_str_parts = [
             'ffmpeg',
             '-hwaccel videotoolbox',
