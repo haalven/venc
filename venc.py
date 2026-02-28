@@ -2,7 +2,6 @@
 
 import os
 import shlex
-from pathlib import Path
 
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import (
@@ -15,6 +14,7 @@ VIDEO_FILTER = 'Video files (*.mp4 *.m4v *.mpg *.mpeg *.qt *.avi);;All files (*)
 
 
 class MainWindow(QWidget):
+
     def __init__(self):
         super().__init__()
         self.setWindowTitle('FFmpeg VideoToolbox command builder')
